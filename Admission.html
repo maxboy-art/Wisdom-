@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admission – Star University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #e0e0e0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #004080;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #0066cc;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004c99;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admission at Star bright University</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>🎓 Admission Requirements</h2>
+      <ul>
+        <li>Minimum of 5 credits in WAEC/NECO including English and Mathematics</li>
+        <li>JAMB score of 180 and above</li>
+        <li>Birth Certificate or Age Declaration</li>
+        <li>Original and Photocopy of credentials</li>
+        <li>Passport-sized photographs (4 copies)</li>
+        <li>Local Government of origin </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>💳 School Fees Payment</h2>
+      <ul>
+        <li>Faculty of Science: ₦120,000 per session</li>
+        <li>Faculty of Arts: ₦100,000 per session</li>
+        <li>Departmental dues: ₦5,000</li>
+        <li>Accommodation (Optional): ₦25,000</li>
+        <li>All payments should be made to: <strong>Star bright University, OPAY, Acc No: 9167673342</strong></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📄 Apply for Admission</h2>
+      <form action="https://formspree.io//movljbjd" method="POST">
+        <label for="fullname">Full Name</label>
+        <input type="text" name="fullname" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <label for="faculty">Select Faculty</label>
+        <select name="faculty" required>
+          <option value="">-- Choose Faculty --</option>
+          <option value="Science">Faculty of Science</option>
+          <option value="Arts">Faculty of Arts</option>
+        </select>
+
+        <label for="course">Preferred Course</label>
+        <input type="text" name="course" required>
+
+        <label for="message">Additional Information</label>
+        <textarea name="message" rows="4" placeholder="Anything you'd like to tell us..."></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+       <p><a href="index.html" class="link-button">←  Back to Home</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Star University. All rights reserved.
+  </footer>
+
+</body>
+</html>
