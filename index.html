@@ -10,6 +10,7 @@
       font-family: 'Segoe UI', sans-serif;
       background: #f9f9f9;
       color: #333;
+      scroll-behavior: smooth; /* Smooth scrolling for anchor links */
     }
 
     header {
@@ -63,7 +64,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5); /* dark overlay */
+      background: rgba(0, 0, 0, 0.5);
       z-index: 0;
     }
 
@@ -94,6 +95,26 @@
 
     .apply-btn:hover {
       background-color: #004c99;
+    }
+
+    /* Scroll Down Button */
+    .scroll-down {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .scroll-down:hover {
+      background: white;
+      color: #004080;
     }
 
     .leadership {
@@ -147,6 +168,27 @@
       padding: 15px;
       margin-top: 40px;
     }
+
+    /* Back to Top Button Styles */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      background-color: #004080;
+      color: white;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 9999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    #backToTopBtn:hover {
+      background-color: #003366;
+    }
   </style>
 </head>
 <body>
@@ -162,16 +204,18 @@
     <a href="About.html">About</a>
     <a href="Faculties.html">Faculties/departments</a>
     <a href="Contact.html">Contact</a>
+  </nav>
 
   <section class="hero">
     <div class="hero-content">
       <h2>Welcome to Star bright University</h2>
       <p>Empowering young minds to lead the world of tomorrow.</p>
-      <a href="Admission.html" class="apply-btn">🎓 Apply Now</a>
+      <a href="Admission.html" class="apply-btn">🎓 Apply Now</a><br>
+
     </div>
   </section>
 
-  <section class="leadership">
+  <section id="leadership" class="leadership">
     <h2>University Leadership</h2>
     <div class="team-container">
       <div class="member-card">
@@ -200,7 +244,7 @@
 
       <div class="member-card">
         <img src="uni4.jpg" alt="Course Rep">
-        <h3>micheal smith</h3>
+        <h3>Micheal Smith</h3>
         <p>Course Representative</p>
       </div>
     </div>
@@ -209,6 +253,25 @@
   <footer>
     &copy; 2025 Star University. All rights reserved.
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn">↑</button>
+
+  <!-- JavaScript for Scroll-to-Top Button -->
+  <script>
+    window.onscroll = function() {
+      let btn = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    document.getElementById("backToTopBtn").onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
 
 </body>
 </html>
